@@ -84,11 +84,126 @@
 // переданных чисел.
 
 // Change code below this line
-function add(a,b,c) {
-  console.log(`Addition result equals ${a+b+c}`);
+// function add(a,b,c) {
+//   console.log(`Addition result equals ${a+b+c}`);
+//   // Change code above this line
+// }
+
+// add(15, 27, 10); 
+// add(10, 20, 30);
+// add(5, 10, 15);
+
+
+// TASK 9 (RETURN VALUE)
+// Дополни код функции add так, чтобы она возвращала результат сложения значений трёх параметров a, b и c.
+
+// function add(a, b, c) {
+//   // Change code below this line
+
+// return a+b+c;
+
+//   // Change code above this line
+// }
+
+// add(2, 5, 8); // 15
+
+// console.log(add(15, 27, 10));
+// console.log(add(10, 20, 30));
+// console.log(add(5, 10, 15));
+
+
+// TASK 10 (TAMPLATE STRINGS 2.0)
+// Функция makeMessage(name, price) составляет и возвращает сообщение о покупке.
+// Она объявляет два параметра, значения которых будут задаваться во время её вызова.
+
+// name - название товара
+// price - цена товара
+// Дополни код функции так, чтобы в переменную message записывалась строка
+// "You picked <product name>, price per item is <product price> credits",
+//   где < product name > и < product price > это значения параметров name и price.
+// Используй синтаксис шаблонных строк.
+
+// function makeMessage (name, price) {
+//   // Change code below this line
+//   const message = `You picked ${name}, price per item is ${price} credits`;
+  
+  
+//   // Change code above this line
+//   return message;
+// };
+
+// console.log(makeMessage('Radar', 6150));
+// console.log(makeMessage('Scanner', 3500));
+// console.log(makeMessage('Reactor', 8000));
+// console.log(makeMessage('Engine', 4070));
+
+
+                  // TASK 11 (MATHEMATICAL OPERATORS 2.0)
+// Функция calculateTotalPrice считает и возвращает общую сумму покупки.
+// Она принимает два параметра, значения которых будут задаваться во время её вызова.
+
+// orderedQuantity - количество единиц товара в заказе;
+// pricePerItem - цена одной единицы товара.
+// Дополни код функции так, чтобы в переменную totalPrice записывалась общая сумма
+// покупки, результат умножения кол - ва товаров на цену одного.
+
+// function calculateTotalPrice (orderedQuantity, pricePerItem) {
+//   // Change code below this line
+//   const totalPrice = orderedQuantity * pricePerItem;
+
+//   // Change code above this line
+//   return totalPrice;
+// };
+
+// console.log(calculateTotalPrice(5, 100));
+// console.log(calculateTotalPrice(8, 60));
+// console.log(calculateTotalPrice(1, 400));
+// console.log(calculateTotalPrice(12, 70));
+
+
+// TASK 12 (PRODUCT ORDER)
+// Функция makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee)
+// составляет и возвращает сообщение о покупке ремонтных дроидов.Она объявляет
+// три параметра, значения которых будут задаваться во время её вызова.
+
+// orderedQuantity - количество дроидов в заказе
+// pricePerDroid - цена одного дроида
+// deliveryFee - стоимость доставки
+// Дополни код функции так, чтобы она возвращала сообщение о заказе в формате
+// "You ordered droids worth <total price> credits. Delivery (<delivery fee> credits) 
+// is included in total price.".Не забудь о цене доставки при вычислениях общей стоимости.
+
+// function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+//   // Change code below this line
+//   const message = `You ordered droids worth ${orderedQuantity * pricePerDroid + deliveryFee} credits. Delivery (${deliveryFee} credits) is included in total price.`
+
+
+
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(makeOrderMessage(2, 100, 50));
+// console.log(makeOrderMessage(4, 300, 100));
+// console.log(makeOrderMessage(10, 70, 200));
+
+
+// TASK 13 (COMPARISON OPERATORS)
+// Функция isAdult объявляет один параметр age(возраст), значение которого будет
+// задаваться во время её вызова.Присвой переменной passed выражение проверки возраста
+// пользователя на совершеннолетие.Человек считается совершеннолетним в возрасте 18 лет и
+// старше.
+
+function isAdult(age) {
+  // Change code below this line
+  const passed = (age >= 18);
+
   // Change code above this line
+  return passed;
 }
 
-add(15, 27, 10); 
-add(10, 20, 30);
-add(5, 10, 15);
+console.log(isAdult(20));
+console.log(isAdult(14));
+console.log(isAdult(8));
+console.log(isAdult(37));
+
