@@ -194,16 +194,99 @@
 // пользователя на совершеннолетие.Человек считается совершеннолетним в возрасте 18 лет и
 // старше.
 
-function isAdult(age) {
+// function isAdult(age) {
+//   // Change code below this line
+//   const passed = (age >= 18);
+
+//   // Change code above this line
+//   return passed;
+// }
+
+// console.log(isAdult(20));
+// console.log(isAdult(14));
+// console.log(isAdult(8));
+// console.log(isAdult(37));
+
+
+// TASK 14 (COMPARSION OPERATORS === and! ==)
+// Функция isValidPassword(password) проверяет равенство сохранённого и введённого паролей
+// и возвращает результат проверки - буль true или false.Переменная SAVED_PASSWORD хранит
+// значение ранее сохраненного пароля.Введённый пароль передаётся в параметр password.
+
+// Присвой переменной isMatch выражение проверки равенства введённого и сохранённого ранее
+// паролей.Результатом выражения проверки должно быть true, если значения совпадают, и
+// false, если нет.
+
+// function isValidPassword(password) {
+//   const SAVED_PASSWORD = 'jqueryismyjam';
+//   // Change code below this line
+//   const isMatch =  password === 'jqueryismyjam';
+
+//   // Change code above this line
+//   return isMatch;
+// }
+
+// console.log(isValidPassword("mangodab3st"))
+// console.log(isValidPassword('jqueryismyjam'))
+
+
+
+// TASK 15 (If ... else statement)
+// Добавь выражение проверки совершеннолетия пользователя, значения параметра age,
+//   в условие для инструкции if.
+
+// Если пользователь совершеннолетний, должен выполняться блок if и в переменную message
+// записывается строка "You are an adult".
+// В противном случае должен выполняться блок else и записывается строка
+// "You are a minor".
+
+// function checkAge(age) {
+//   let message;
+
+//   if (age >= 18) { // Change this line
+//     message = 'You are an adult';
+//   } else {
+//     message = 'You are a minor';
+//   }
+
+//   return message;
+// }
+
+// console.log(checkAge(20))
+// console.log(checkAge(8))
+// console.log(checkAge(14))
+// console.log(checkAge(38))
+
+
+// TASK 16 (warehouse of goods)
+// Функция checkStorage(available, ordered) проверяет возможность оформления заказа и
+// возвращает сообщение о результате.Она объявляет два параметра, значения которых будут
+// задаваться во время её вызова:
+
+// available - общее количество товаров на складе
+// ordered - единиц товара в заказе
+// Используя ветвления дополни код функции так, что:
+
+// Если в заказе указано число, превышающее количество товаров на складе, в переменную
+// message записывается строка "Not enough goods in stock!".
+// В противном случае записывается строка "Order is processed, 
+// our manager will contact you.".
+
+function checkStorage(available, ordered) {
+  let message;
   // Change code below this line
-  const passed = (age >= 18);
+  if (available < ordered) {
+    message = ('Not enough goods in stock!')
+  } else {
+    message = ('Order is processed, our manager will contact you.')
+  }
 
   // Change code above this line
-  return passed;
+  return message;
 }
 
-console.log(isAdult(20));
-console.log(isAdult(14));
-console.log(isAdult(8));
-console.log(isAdult(37));
-
+console.log(checkStorage(100, 50));
+console.log(checkStorage(100, 130));
+console.log(checkStorage(200, 20));
+console.log(checkStorage(200, 150));
+console.log(checkStorage(150, 180));
