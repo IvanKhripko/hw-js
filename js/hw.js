@@ -272,21 +272,151 @@
 // В противном случае записывается строка "Order is processed, 
 // our manager will contact you.".
 
-function checkStorage(available, ordered) {
-  let message;
-  // Change code below this line
-  if (available < ordered) {
-    message = ('Not enough goods in stock!')
-  } else {
-    message = ('Order is processed, our manager will contact you.')
-  }
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+//   if (available < ordered) {
+//     message = ('Not enough goods in stock!')
+//   } else {
+//     message = ('Order is processed, our manager will contact you.')
+//   }
 
-  // Change code above this line
-  return message;
-}
+//   // Change code above this line
+//   return message;
+// }
 
-console.log(checkStorage(100, 50));
-console.log(checkStorage(100, 130));
-console.log(checkStorage(200, 20));
-console.log(checkStorage(200, 150));
-console.log(checkStorage(150, 180));
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 150));
+// console.log(checkStorage(150, 180));
+
+
+
+// TASK 17 (Combined assignment operator)
+// Замени выражения со стандартными математеческими операторами на комбинированный
+// оператор присвоения с добавлением, вычитанием, умножением и делением.
+// let a = 5;
+// let b = 10;
+// let c = 15;
+// let d = 20;
+
+// // Change code below this line
+// a += 2;
+// b -= 4;
+// c *= 3;
+// d /= 10;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+
+// TASK 18 (Balance check)
+// Станция по продаже ремонтных дроидов готова к запуску, осталось написать программное
+// обеспечение для отдела продаж.
+// Функция makeTransaction(pricePerDroid, orderedQuantity, customerCredits)
+// выполняет транзакцию по продаже дроидов и возвращает сообщение о результате операции.
+// Она объявляет три параметра, значения которых будут задаваться во время её вызова:
+
+// pricePerDroid - цена одного дроида
+// orderedQuantity - кол-во заказанных дроидов
+// customerCredits - сумма средств на счету клиента
+// Дополни её следующим функционалом:
+
+// Объяви переменную totalPrice для хранения общей суммы заказа и присвой ей выражение
+// расчёта этой суммы.
+// Добавь проверку сможет ли клиент оплатить заказ:
+// если сумма к оплате превышает количество кредитов на счету клиента, запиши в
+// переменную message строку "Insufficient funds!";
+// в противном случае, вычти сумму покупки со счёта клиента и запиши в переменную
+// message сообщение: "You ordered <число> droids, you have <число> credits left".
+
+// function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+//   let message;
+//   // Change code below this line
+//   const totalPrice = pricePerDroid * orderedQuantity;
+//   if (pricePerDroid * orderedQuantity > customerCredits) {
+//     message = ('Insufficient funds!')
+//   } else {
+//     message = (`You ordered ${orderedQuantity} droids, you have ${customerCredits - pricePerDroid * orderedQuantity} credits left`)
+//   }
+  
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(makeTransaction(3000, 5, 23000));
+// console.log(makeTransaction(1000, 3, 15000));
+// console.log(makeTransaction(5000, 10, 8000));
+// console.log(makeTransaction(2000, 8, 10000));
+// console.log(makeTransaction(500, 10, 5000));
+
+
+// TASK 19 (Block else...if)
+// Функция checkPassword(password) получает пароль пользователя в параметр password,
+//   проверяет его на совпадение с паролем администратора в переменной ADMIN_PASSWORD и
+// возвращает сообщение о результате сравнения, хранящееся в переменной message.
+// Если значение параметра password равно null, значит пользователь отменил операцию и в
+// message записывается строка "Canceled by user!".
+// Если значение параметра password совпадает со значением ADMIN_PASSWORD, в переменную
+// message присваивается строка "Welcome!".
+// Если ни одно из предыдущих условий не выполнилось, в переменную message записывается
+// строка "Access denied, wrong password!".
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message;
+
+//   if (password === null) { // Change this line
+//     message =  'Canceled by user!';
+//   } else if (password === ADMIN_PASSWORD) { // Change this line
+//     message = 'Welcome!';
+//   } else {
+//     message = 'Access denied, wrong password!';
+//   }
+
+//   return message;
+// }
+
+// console.log(checkPassword('mangohackzor'));
+// console.log(checkPassword(null));
+// console.log(checkPassword('polyhax'));
+// console.log(checkPassword('jqueryismyjam'));
+
+
+// TASK 20 (warehouse of goods 2.0)
+// Функция checkStorage(available, ordered) проверяет возможность оформления заказа и
+// возвращает сообщение о результате.Она объявляет два параметра, значения которых будут
+// задаваться во время её вызова.
+// available - доступное количество товаров на складе
+// ordered - единиц товара в заказе
+// Используя ветвления дополни код функции так, что:
+// Если в заказе еще нет товаров, то есть значение параметра ordered равно 0, в переменную
+// message присваивается строка "There are no products in the order!".
+// Eсли товаров в заказе больше чем доступно товаров на складе, то в переменную message
+// присваивается строка "Your order is too large, there are not enough items in stock!".
+// В противном случае в переменную message присваевается строка "The order is accepted, our 
+// manager will contact you".
+
+// function checkStorage(available, ordered) {
+//   let message;
+//   // Change code below this line
+//   if (ordered === 0) {
+//     message = 'There are no products in the order!';
+//   } else if (available < ordered) {
+//     message = 'Your order is too large, there are not enough items in stock!';
+//   } else {
+//     message = 'The order is accepted, our manager will contact you';
+//   }
+//   // Change code above this line
+//   return message;
+// }
+
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(70, 0));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 250));
+// console.log(checkStorage(150, 0));
