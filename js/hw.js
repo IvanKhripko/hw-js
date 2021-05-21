@@ -420,3 +420,114 @@
 // console.log(checkStorage(200, 20));
 // console.log(checkStorage(200, 250));
 // console.log(checkStorage(150, 0));
+
+
+// TASK 21(Logical AND (&& operator))
+// Функция isNumberInRange(start, end, number) проверяет, входит ли число в промежуток.
+// Она объявляет три параметра, значения которых будут задаваться во время её вызова:
+// number - число, вхождение которого проверяется
+// start - начало числового промежутка
+// end - конец числового промежутка
+// Присвой переменной isInRange выражение проверки вхождения number в числовой промеждуток
+// от start до end.То есть число должно быть больше либо равно start и меньше либо равно
+// end.Результатом выражения проверки будет буль true или false.
+
+// function isNumberInRange(start, end, number) {
+//     const isInRange = (number >= start && number <= end); // Change this line
+    
+//   return isInRange;
+// }
+
+// console.log(isNumberInRange(10, 30, 17));
+// console.log(isNumberInRange(10, 30, 5));
+// console.log(isNumberInRange(20, 50, 24));
+// console.log(isNumberInRange(20, 50, 76));
+
+
+// TASK 22(Logical "OR" (operator ||))
+// Функция checkIfCanAccessContent(subType) проверяет, может ли пользователь получить
+// доступ к контенту.Проверка происходит по типу подписки.Получить доступ могут только
+// пользователи с подпиской pro или vip.
+// Присвой переменной canAccessContent выражение проверки подписки.Если значение параметра
+// subType равно строкам "pro" или "vip", пользователь получит доступ.Результатом выражения
+// проверки будет буль true или false.
+
+// function checkIfCanAccessContent(subType) {
+//   const canAccessContent = (subType === 'pro' || subType === 'vip'); // Change this line
+
+//   return canAccessContent;
+// }
+
+// console.log(checkIfCanAccessContent('pro'));
+// console.log(checkIfCanAccessContent('starter'));
+// console.log(checkIfCanAccessContent('vip'));
+// console.log(checkIfCanAccessContent('free'));
+
+
+// TASK 23 (Logical "NOT" (operator!))
+// Функция isNumberNotInRange(start, end, number) проверяет, не входит ли число в
+// промежуток.То есть число должно быть меньше либо равно start и больше либо равно end.
+// Результатом выражения проверки будет буль true или false.
+// Она объявляет три параметра, значения которых будут задаваться во время её вызова:
+// number - число, не вхождение которого проверяется
+// start - начало числового промежутка
+// end - конец числового промежутка
+// Присвой переменной isNotInRange выражение инверсии значения переменной isInRange
+// используя оператор!.
+
+// function isNumberNotInRange(start, end, number) {
+//   const isInRange = number >= start && number <= end;
+//   const isNotInRange = !isInRange; // Change this line
+
+//   return isNotInRange;
+// }
+
+// console.log(isNumberNotInRange(10, 30, 17));
+// console.log(isNumberNotInRange(10, 30, 5));
+// console.log(isNumberNotInRange(20, 50,24));
+// console.log(isNumberNotInRange(20, 50, 76));
+
+
+// TASK 24 (Discount calculation)
+// Функция getDiscount(totalSpent) определяет значение скидки в зависимости от общей суммы
+// потраченных денег(параметр totalSpent) в магазине за всё время(партнёрская программа).
+// Скидка записывается в переменную discount и возвращается из функции как результат её
+// работы.
+// Используя ветвления и логические операторы, дополни код функции.
+// Если потрачено от 50000(включительно) или больше кредитов - скидка 10 %
+//     (золотой партнёр)
+// Если потрачено от 20000(включительно) до 50000 кредитов - скидка 5 %
+//     (серебрянный партнёр)
+// Если потрачено от 5000(включительно) до 20000 кредитов - скидка 2 %
+//     (бронзовый партнёр)
+// Если потрачено меньше чем 5000 кредитов - скидка 0 (базовый партнёр)
+// Значения скидок каждого уровня хранятся в одноимённых константах
+// BASE_DISCOUNT, BRONZE_DISCOUNT, SILVER_DISCOUNT и GOLD_DISCOUNT
+
+function getDiscount(totalSpent) {
+  const BASE_DISCOUNT = 0;
+  const BRONZE_DISCOUNT = 0.02;
+  const SILVER_DISCOUNT = 0.05;
+  const GOLD_DISCOUNT = 0.1;
+  let discount;
+  // Change code below this line
+    if (totalSpent >= 50000 ) {
+        discount = GOLD_DISCOUNT;
+    } else if (totalSpent >= 20000) {
+        discount = SILVER_DISCOUNT;
+    } else if (totalSpent >= 5000) {
+        discount = BRONZE_DISCOUNT;
+    } else {
+        discount = BASE_DISCOUNT;
+}
+  // Change code above this line
+  return discount;
+}
+
+console.log(getDiscount(137000));
+console.log(getDiscount(46900));
+console.log(getDiscount(8250));
+console.log(getDiscount(1300));
+console.log(getDiscount(5000));
+console.log(getDiscount(20000));
+console.log(getDiscount(50000));
