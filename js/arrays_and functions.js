@@ -91,8 +91,70 @@
 // Переопредели значения элементов с индексами 1 и 3. Замени "plum" на "peach",
 // а "orange" на "banana".
 
-const fruits = ["apple", "plum", "pear", "orange"];
+// const fruits = ["apple", "plum", "pear", "orange"];
 
-// Write your code under this line
-console.log(fruits[1] = 'peach');
-console.log(fruits[3] = 'banana');
+// // Write your code under this line
+// console.log(fruits[1] = 'peach');
+// console.log(fruits[3] = 'banana');
+
+
+// TASK 7 (Array length)
+// Объяви переменную fruitsArrayLength и присвой ей длину
+// массива fruits используя свойство length.
+
+// const fruits = ["apple", "peach", "pear", "banana"];
+// const fruitsArrayLength = fruits.length;
+// console.log(fruitsArrayLength);
+// // Change code below this line
+
+
+// TASK 8(Last item index)
+// Объяви две перемнные:
+// lastElementIndex	Мндекс последнего элемента масcива fruits через длина_массива - 1
+// lastElement	Значение последнего элемента массива
+
+// const fruits = ["apple", "peach", "pear", "banana"];
+// const lastElementIndex = fruits.length - 1;
+// console.log(lastElementIndex);
+// const lastElement = fruits[lastElementIndex];
+// console.log(lastElement);
+
+
+// TASK9(Edge elements of the array)
+// Напиши функцию getExtremeElements(array) которая принимает один параметр array - массив
+// элементов произвольной длины.Функция должна возвращать массив из двух
+// элементов - первого и последнего элемента параметра array.
+
+// function getExtremeElements(array) {
+//     // Change code below this line
+//     const lastElementIndex = array.length - 1;
+//     const firstElement = array[0];
+//     const lastElement = array[lastElementIndex];
+//     return [firstElement, lastElement];
+    
+//   // Change code above this line
+// }
+
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+// console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
+
+// Change code below this line
+
+
+// TASK10(The split () string method)
+// Дополни код функции splitMessage(message, delimeter) так, чтобы она возвращала в
+// переменной words результат разделения строки message по разделителю delimeter - массив
+// строк.
+
+// function splitMessage(message, delimeter) {
+//   let words;
+//   // Change code below this line
+//     words = message.split(delimeter);
+//   // Change code above this line
+//   return words;
+// }
+
+// console.log(splitMessage("Mango hurries to the train", " "));
+// console.log(splitMessage("Mango", ""))
+// console.log(splitMessage("best_for_week", "_"))
