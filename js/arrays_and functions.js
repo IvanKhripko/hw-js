@@ -169,18 +169,138 @@
 // Напиши тело функции, чтобы она возвращала общую стоимость гравировки всех слов в
 // строке.
 
-function calculateEngravingPrice(message, pricePerWord) {
-   // Change code below this line
-    let price;
-    price = message.split(' ').length * pricePerWord;
-    // price = message.length * pricePerWord;
+// function calculateEngravingPrice(message, pricePerWord) {
+//    // Change code below this line
+//     let price;
+//     price = message.split(' ').length * pricePerWord;
+//     // price = message.length * pricePerWord;
     
 
-   // Change code above this line
-    return price;
-}
+//    // Change code above this line
+//     return price;
+// }
 
-console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
-console.log(calculateEngravingPrice("JavaScript is in my blood", 20));
-console.log(calculateEngravingPrice("Web-development is creative work", 40));
-console.log(calculateEngravingPrice("Web-development is creative work", 20));
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 20));
+// console.log(calculateEngravingPrice("Web-development is creative work", 40));
+// console.log(calculateEngravingPrice("Web-development is creative work", 20));
+
+
+// TASK 12( join() array method )
+// Дополни код функции makeStringFromArray(array, delimeter) так, чтобы она возвращала в
+// переменной string результат соединения элементов массива array c разделителем
+// delimeter - строку.
+
+// function makeStringFromArray(array, delimeter) {
+//     let string;
+//     // Change code below this line
+
+//     string = array.join(delimeter);
+
+//     // Change code above this line
+//     return string;
+// }
+
+// console.log(makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " "));
+// console.log(makeStringFromArray(["M", "a", "n", "g", "o"], ""));
+// console.log(makeStringFromArray(["top", "picks", "for", "you"], "_"));
+
+
+// TASK 4
+
+// Функция formatMessage(message, maxLength)
+// принимает строку (параметр message) и форматирует её,
+// если длина превышает значение в параметре maxLength.
+
+// function formatMessage(message, maxLength) {
+//     // if (maxLength < message.length) {
+
+//         return message.slice(0, maxLength)  + '...';
+//     }
+    
+//     return message;
+// }
+
+
+// function formatMessage(message, maxLength) {
+//     return maxLength < message.length ? message.slice(0, maxLength) + '...' : message;
+// }
+
+
+// console.log(formatMessage("Curabitur ligula sapien", 16)); //возвращает 'Curabitur ligula...'.
+// console.log(formatMessage("Curabitur ligula sapien", 23)); //возвращает 'Curabitur ligula sapien'.
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15)); //возвращает 'Nunc sed turpis...'.
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41)); //возвращает 'Nunc sed turpis a felis in nunc fringilla'.
+// TASK 1
+// Напишите функцию pow(x,n), которая возвращает x в степени n.
+// Иначе говоря, умножает x на себя n раз и возвращает результат.
+// Math.pow()
+// TASK 2
+// напиши функцию которая будет суммировать соседние числа и пушить их в новый массив
+
+// const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
+
+// TASK 3
+// Напишите решение, которое вычисляет сумму
+// квадратных корней для всех чисел у которых квадратный корень будет целым числом.
+
+// const arr = [4, 3, 5, 16, 16, 33, 4, 9]
+// Результат который должны получить [2, 4, 4, 2, 3]
+
+// Number.isInteger(arr[i])
+
+// TASK 4
+
+// Функция formatMessage(message, maxLength)
+// принимает строку (параметр message) и форматирует её,
+// если длина превышает значение в параметре maxLength.
+
+// function formatMessage(message, maxLength) {
+// }
+
+// formatMessage("Curabitur ligula sapien", 16); //возвращает 'Curabitur ligula...'.
+// formatMessage("Curabitur ligula sapien", 23); //возвращает 'Curabitur ligula sapien'.
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 15); //возвращает 'Nunc sed turpis...'.
+// formatMessage("Nunc sed turpis a feОт GoIT Academy 8 всем:  07:32 PM
+// Task 3
+// Нужно перебрать объекты и вывести имя лучшего сотрудника
+// const findBestEmployee = function(obj) {}
+
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
+// console.log(
+//   findBestEmployee({
+//     ann: 29,
+//     david: 35,
+//     helen: 1,
+//     lorence: 99,
+//   })
+// ); // lorence
+// console.log(
+//     findBestEmployee({
+//         poly: 12,
+//         mango: 17,
+//         ajax: 4,
+//     }),
+// ); // mango
+// console.log(
+//     findBestEmployee({
+//         lux: 147,
+//         david: 21,
+//         kiwi: 19,
+//         chelsy: 38,
+//     }),
+// ); // lux
+
+// const findBestEmployee = (obj) => Object.entries(obj).sort((a, b) => b[1] - a[1])[0][0];
+// Task 1
+// Добавить метод getInfo в объект user, который будет возвращать инфу о пользователе в формате
+// Name: Peter. Surname: Parker. Age: 22. Position: spider-man.
+
+// const user = {
+//     name: 'Peter',
+//     surname: 'Parker',
+//     age: 22,
+//     position: 'spider-man'
+// }
