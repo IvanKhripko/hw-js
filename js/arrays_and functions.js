@@ -58,7 +58,7 @@
 //     return  "Your order is too large, not enough goods in stock!";
 //   } 
 //     return "The order is accepted, our manager will contact you" 
-      
+
 //     // return message;
 //   // Change code above this line
 // }
@@ -131,7 +131,7 @@
 //     const firstElement = array[0];
 //     const lastElement = array[lastElementIndex];
 //     return [firstElement, lastElement];
-    
+
 //   // Change code above this line
 // }
 
@@ -174,7 +174,7 @@
 //     let price;
 //     price = message.split(' ').length * pricePerWord;
 //     // price = message.length * pricePerWord;
-    
+
 
 //    // Change code above this line
 //     return price;
@@ -217,7 +217,7 @@
 
 //         return message.slice(0, maxLength)  + '...';
 //     }
-    
+
 //     return message;
 // }
 
@@ -347,3 +347,100 @@
 // for (let i = 0; i < max; i += 1) {
 //   console.log(`${max} % ${i} = `, max % i);
 //
+
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19];
+// let largeCoin = numbers[0];
+
+// for (const number of numbers) {
+//     if (number > largeCoin) {
+//         largeCoin = number;
+//  } 
+// }
+
+// console.log('largeCoin', largeCoin);
+
+// TASK 13(slug generator) from 1:50:00 (Lesson 3 Repeta)
+// Напиши функцию slugify(title) которая принимает заголовок статьи,
+//     параметр title, и возвращает slug, созданный из этой строки.
+// Значением параметра title будут строки, слова которых разделены только
+// пробелами
+// Все символы slug должны быть в нижнем регистре
+// Все слова slug должна быть разделены тире
+
+// function slugify(title) {
+//   // Change code below this line
+//     //(first option) const slug = title.toLowerCase().split(' ').join('-');
+//     // (second option)const normalizedString = title.toLowerCase();
+
+//     // const words = normalizedString.split(' ');
+
+//     // const slug = words.join('-');
+    
+    
+//     //     return slug;
+//     // }
+//   // Change code above this line
+    
+
+
+// console.log(slugify("Arrays for begginers"));
+// console.log(slugify("English for developer"));
+// console.log(slugify("Ten secrets of JavaScript"));
+// console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
+
+
+// TASK (slice() method)
+// Дополни код так, чтобы переменные содержали частичные копии исходного
+// массива fruits.
+// firstTwoEls - массив из первых двух элементов
+// nonExtremeEls - массив из всех элементов кроме первого и последнего
+// lastThreeEls - массив из трёх последних элементов
+
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+// // Change code below this line
+// const firstTwoEls = ;
+// const nonExtremeEls = ;
+// const lastThreeEls = ;
+
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// // Change code below this line
+// const firstTwoEls = fruits.slice(0,2);
+// console.log(firstTwoEls);
+// const nonExtremeEls = fruits.slice(1,4);
+// console.log(nonExtremeEls);
+// const lastThreeEls = fruits.slice(-3);
+// console.log(lastThreeEls);
+
+// TASK FROM REPETA
+// напиши скрипт, который считает сумму элементов двух массивов 
+
+const array1 = [20, 30, 10, 12];
+const array2 = [10, 15, 30];
+
+let total = 0;
+// for (let i = 0; i < array1.length; i += 1){
+//     total += array1[i];
+// }
+
+// for (let i = 0; i < array2.length; i += 1){
+//     total += array2[i];
+// }
+
+
+// console.log(total)
+// const numbers = array1.concat(array2);
+// // console.log(numbers);
+// for (const number of numbers) {
+//     total += number;
+// }
+
+
+
+for (const number of array1.concat(array2)) {
+    total += number;
+}
+
+console.log(total);
+ 
