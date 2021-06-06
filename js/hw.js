@@ -782,20 +782,20 @@
 // больше maxLength, то функция обрезает строку до maxLength символов и добавляет в конец
 // троеточие "...", после чего возвращает укороченную версию.
 
-function formatMessage(message, maxLength) {
-  let result;
-  // Change code below this line
-  result = message.length > maxLength ? message.slice(0, maxLength) + '...' : message;
-  /// Change code above this line
-  return result;
-}
+// function formatMessage(message, maxLength) {
+//   let result;
+//   // Change code below this line
+//   result = message.length > maxLength ? message.slice(0, maxLength) + '...' : message;
+//   /// Change code above this line
+//   return result;
+// }
 
-formatMessage("Curabitur ligula sapien", 16);
-formatMessage("Curabitur ligula sapien", 23);
-formatMessage("Vestibulum facilisis purus nec", 20);
-formatMessage("Vestibulum facilisis purus nec", 30);
-formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
-formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);
+// formatMessage("Curabitur ligula sapien", 16);
+// formatMessage("Curabitur ligula sapien", 23);
+// formatMessage("Vestibulum facilisis purus nec", 20);
+// formatMessage("Vestibulum facilisis purus nec", 30);
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
+// formatMessage("Nunc sed turpis a felis in nunc fringilla", 41);
 
 // TASK 34 (Methods toLowerCase() и toUpperCase())
 // Функция normalizeInput(input) принимает строку(параметр input) и возвращает такую же
