@@ -416,10 +416,10 @@
 // TASK FROM REPETA
 // напиши скрипт, который считает сумму элементов двух массивов 
 
-const array1 = [20, 30, 10, 12];
-const array2 = [10, 15, 30];
+// const array1 = [20, 30, 10, 12];
+// const array2 = [10, 15, 30];
 
-let total = 0;
+// let total = 0;
 // for (let i = 0; i < array1.length; i += 1){
 //     total += array1[i];
 // }
@@ -437,10 +437,116 @@ let total = 0;
 // }
 
 
+// for (const number of array1.concat(array2)) {
+//     total += number;
+// }
 
-for (const number of array1.concat(array2)) {
-    total += number;
-}
+// console.log(total);
 
-console.log(total);
  
+// TASK 15(Concat() metodth)
+// Дополни код так, чтобы в переменной allClients получился массив всех
+// элементов массивов oldClients и newClients.
+// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+
+// const allClients = ; // Change this line
+
+// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+// const allClients = oldClients.concat(newClients); // Change this line
+// console.log(allClients);
+// // Или новыйметод:
+// const allClients = [...oldClients, ...newClients];
+
+
+// TASK 16 (Array composition)
+// Напиши функцию makeArray(firstArray, secondArray, maxLength) для создания
+// нового массива со всеми элементами двух исходных firstArray и secondArray.Параметр
+// maxLength содержит максимально допустимую длину нового массива.
+// Если количество элементов нового массива больше maxLength, функция должна вернуть
+// копию массива длиной maxLength элементов.В противном случае функция должна вернуть
+// новый массив целиком.
+// function makeArray(firstArray, secondArray, maxLength) {
+//     // Change code below this line
+
+
+
+//     // Change code above this line
+// }
+//  (first way) 
+// function makeArray(firstArray, secondArray, maxLength) {
+//     // Change code below this line
+//     const arrays = firstArray.concat(secondArray);
+//     if (arrays > maxLength) {
+//         arrays.length = maxLength;
+//         return arrays;
+//     }
+//     return arrays.slice(0, maxLength);
+//     // Change code above this line
+// }
+
+// second way
+// function makeArray(firstArray, secondArray, maxLength) {
+//     // Change code below this line
+//     const arrays = firstArray.concat(secondArray).slice(0, maxLength);
+    
+//   return arrays;
+//     // Change code above this line
+// }
+
+
+// console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3));
+// console.log(makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4));
+// console.log(makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3));
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2));
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4));
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0));
+
+
+// TASK 17 ('for' loop)
+// for (let i = 0; i <= 20; i += 5) {
+//   console.log(i);
+// }
+// Дополни цикл for так, чтобы он логировал все целые числа в диапазоне от start до end
+// включительно.
+// const start = 3;
+// const end = 7;
+
+// for (let i = ; i <= ; i += ) { // Change this line
+//     console.log(i)
+// }
+
+// const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i += 1) { // Change this line
+//     console.log(i)
+// }
+
+
+// TASK 18(Sum of numbers 'for' loop)
+// Напиши функцию calculateTotal(number), которая принимает целое число(параметр number) и
+// возвращает сумму всех целых чисел от единицы и до этого числа.Например, если number
+// равно 3, то сумма это 1 + 2 + 3, то есть 6.
+// function calculateTotal(number) {
+//  // Change code below this line
+
+//   // Change code above this line
+// }
+
+// function calculateTotal(number) {
+//  // Change code below this line
+//     let sum = 0;
+//     for (let i = 1; i <= number; i += 1) {
+//         sum += i;
+//     }
+
+//     return sum;
+//   // Change code above this line
+// }
+// console.log(calculateTotal(1));
+// console.log(calculateTotal(6));
+// console.log(calculateTotal(28));
+// console.log(calculateTotal(171));
+// console.log(calculateTotal(300));
