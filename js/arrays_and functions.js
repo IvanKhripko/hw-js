@@ -552,6 +552,6 @@
 // console.log(calculateTotal(300));
 
 
-for (let i = 0; i <= 10; i++) { // выведет 0, затем 1, затем 2
-  console.log(i);
-}
+// for (let i = 0; i <= 10; i++) { // выведет 0, затем 1, затем 2
+//   console.log(i);
+// }
