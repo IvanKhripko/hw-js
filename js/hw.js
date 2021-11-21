@@ -1007,3 +1007,549 @@
 // console.log(makeOrderMessage(10, 70, 200));
 
 // console.log(makeOrderMessage(5, 200, 150));
+
+
+// Функция isAdult объявляет один параметр age (возраст), значение которого будет задаваться во время
+//  её вызова. Присвой переменной passed выражение проверки возраста пользователя на совершеннолетие.
+//   Человек считается совершеннолетним в возрасте 18 лет и старше.
+// function isAdult (age) {
+//   const passed = age >= 18;
+
+//   return passed;
+// }
+
+// console.log(isAdult(20));
+// console.log(isAdult(14));
+// console.log(isAdult(8));
+// console.log(isAdult(37));
+
+
+// Функция isValidPassword(password) проверяет равенство сохранённого и введённого паролей и 
+// возвращает результат проверки - буль true или false. Переменная SAVED_PASSWORD хранит значение 
+// ранее сохраненного пароля. Введённый пароль передаётся в параметр password.
+// Присвой переменной isMatch выражение проверки равенства введённого и сохранённого ранее паролей. 
+// Результатом выражения проверки должно быть true, если значения совпадают, и false, если нет.
+
+// function isValidPassword (password) {
+//   const SAVED_PASSWORD = 'jqueryismyjam';
+//   const isMatch = password === 'jqueryismyjam';
+//   return isMatch;
+// }
+
+// console.log(isValidPassword("mangodab3st"));
+// console.log(isValidPassword("kiwirul3z") );
+// console.log(isValidPassword("jqueryismyjam"));
+
+
+// Добавь выражение проверки совершеннолетия пользователя, значения параметра age, в условие для 
+// инструкции if.
+// Если пользователь совершеннолетний, должен выполняться блок if и в переменную message записывается 
+// строка "You are an adult".
+// В противном случае должен выполняться блок else и записывается строка "You are a minor".
+// function checkAge(age) {
+//   let message;
+
+//   if (age >= 18) {
+//     message = 'You are an adult';
+//   } else {
+//     message = 'You are a minor';
+//   }
+
+//   return message;
+// }
+
+// console.log(checkAge(20));
+// console.log(checkAge(8));
+// console.log(checkAge(14));
+// console.log(checkAge(38));
+
+
+// Функция checkStorage(available, ordered) проверяет возможность оформления заказа и возвращает 
+// сообщение о результате. Она объявляет два параметра, значения которых будут задаваться во время
+//  её вызова:
+// available - общее количество товаров на складе
+// ordered - единиц товара в заказе
+// Используя ветвления дополни код функции так, что:
+// Если в заказе указано число, превышающее количество товаров на складе, в переменную message 
+// записывается строка "Not enough goods in stock!".
+// В противном случае записывается строка "Order is processed, our manager will contact you."
+
+// function checkStorage(available, ordered) {
+//   let message;
+//   if  (ordered > available) {
+//     message = "Not enough goods in stock!";
+//   } else {
+//     message = "Order is processed, our manager will contact you.";
+//   }
+//   return message;
+// }
+
+// console.log(checkStorage(100,50));
+// console.log(checkStorage(100,130));
+// console.log(checkStorage(200,20));
+// console.log(checkStorage(200,150));
+// console.log(checkStorage(150,180));
+
+
+// Замени выражения со стандартными математеческими операторами на комбинированный оператор 
+// присвоения с добавлением, вычитанием, умножением и делением.
+
+// let a = 5;
+// let b = 10;
+// let c = 15;
+// let d = 20;
+
+// console.log(a += 2);
+// console.log(b -= 4);
+// console.log(c *= 3);
+// console.log(d /= 10);
+
+
+// Станция по продаже ремонтных дроидов готова к запуску, осталось написать программное обеспечение 
+// для отдела продаж.
+// Функция makeTransaction(pricePerDroid, orderedQuantity, customerCredits) выполняет транзакцию по 
+// продаже дроидов и возвращает сообщение о результате операции. Она объявляет три параметра, 
+// значения которых будут задаваться во время её вызова:
+// pricePerDroid - цена одного дроида
+// orderedQuantity - кол-во заказанных дроидов
+// customerCredits - сумма средств на счету клиента
+// Дополни её следующим функционалом:
+// Объяви переменную totalPrice для хранения общей суммы заказа и присвой ей выражение расчёта этой 
+// суммы.
+// Добавь проверку сможет ли клиент оплатить заказ:
+// если сумма к оплате превышает количество кредитов на счету клиента, запиши в переменную message 
+// строку "Insufficient funds!";
+// в противном случае, вычти сумму покупки со счёта клиента и запиши в переменную message сообщение:
+//  "You ordered <число> droids, you have <число> credits left".
+
+// function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
+// const totalPrice = pricePerDroid * orderedQuantity;
+// let message;
+// if (totalPrice > customerCredits) {
+// message = "Insufficient funds!";
+// } else {
+//   message = `You ordered ${orderedQuantity} droids, you have ${customerCredits - totalPrice} credits left`;
+// }
+// return message;
+// }
+
+// console.log(makeTransaction(3000, 5, 23000));
+// console.log(makeTransaction(1000, 3, 15000));
+// console.log(makeTransaction(5000, 10, 8000));
+// console.log(makeTransaction(2000, 8, 10000));
+// console.log(makeTransaction(500, 10, 5000));
+
+
+// Функция checkPassword(password) получает пароль пользователя в параметр password, проверяет
+// его на совпадение с паролем администратора в переменной ADMIN_PASSWORD и возвращает 
+// сообщение о результате сравнения, хранящееся в переменной message.
+// Если значение параметра password равно null, значит пользователь отменил операцию и в 
+// message записывается строка "Canceled by user!".
+// Если значение параметра password совпадает со значением ADMIN_PASSWORD, в переменную message 
+// присваивается строка "Welcome!".
+// Если ни одно из предыдущих условий не выполнилось, в переменную message записывается 
+// строка "Access denied, wrong password!".
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = 'jqueryismyjam';
+//   let message = "Access denied, wrong password!";
+  
+//   if (password === ADMIN_PASSWORD) {
+//     message = "Welcome!";
+//   } else if (password === null) {
+//   message = "Canceled by user!";
+//   } else {
+//     message = "Access denied, wrong password!";
+//   }
+//   return message;
+// }
+
+// console.log(checkPassword("mangohackzor"));
+// console.log(checkPassword(null));
+// console.log(checkPassword("polyhax"));
+// console.log(checkPassword("jqueryismyjam"));
+
+
+// Функция checkStorage(available, ordered) проверяет возможность оформления заказа и 
+// возвращает сообщение о результате. Она объявляет два параметра, значения которых будут 
+// задаваться во время её вызова.
+// available - доступное количество товаров на складе
+// ordered - единиц товара в заказе
+// Используя ветвления дополни код функции так, что:
+// Если в заказе еще нет товаров, то есть значение параметра ordered равно 0, в переменную
+//  message присваивается строка "There are no products in the order!".
+// Eсли товаров в заказе больше чем доступно товаров на складе, то в переменную message
+//  присваивается строка "Your order is too large, there are not enough items in stock!".
+// В противном случае в переменную message присваевается строка 
+// "The order is accepted, our manager will contact you".
+
+// function checkStorage (available, ordered) {
+//   let message;
+//   if (ordered === 0) {
+//     message = "There are no products in the order!";
+//   } else if(ordered > available) {
+//     message = "Your order is too large, there are not enough items in stock!";
+//   } else {
+//     message = "The order is accepted, our manager will contact you";
+//   }
+//   return message;
+// }
+
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(70, 0));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 250));
+// console.log(checkStorage(150, 0));
+
+
+// Функция isNumberInRange(start, end, number) проверяет, входит ли число в промежуток. 
+// Она объявляет три параметра, значения которых будут задаваться во время её вызова:
+// number - число, вхождение которого проверяется
+// start - начало числового промежутка
+// end - конец числового промежутка
+// Присвой переменной isInRange выражение проверки вхождения number в числовой промеждуток от 
+// start до end. То есть число должно быть больше либо равно start и меньше либо равно end. 
+// Результатом выражения проверки будет буль true или false.
+
+// function isNumberInRange(start, end, number) {
+//   const isInRange = (number >= start && number <= end) ;
+  
+//   return isInRange;
+// }
+
+// console.log(isNumberInRange(10, 30, 17));
+// console.log(isNumberInRange(10, 30, 5));
+// console.log(isNumberInRange(20, 50, 24));
+// console.log(isNumberInRange(20, 50, 76));
+
+
+// Функция checkIfCanAccessContent(subType) проверяет, может ли пользователь получить доступ к 
+// контенту. Проверка происходит по типу подписки. Получить доступ могут только пользователи с 
+// подпиской pro или vip.
+// Присвой переменной canAccessContent выражение проверки подписки. Если значение параметра 
+// subType равно строкам "pro" или "vip", пользователь получит доступ. Результатом выражения 
+// проверки будет буль true или false.
+
+// function checkIfCanAccessContent(subType) {
+//   const canAccessContent = subType === 'pro' || subType === 'vip';
+
+//   return canAccessContent;
+// }
+
+// console.log(checkIfCanAccessContent("pro"));
+// console.log(checkIfCanAccessContent("starter"));
+// console.log(checkIfCanAccessContent("vip"));
+// console.log(checkIfCanAccessContent("free"));
+
+
+// Функция isNumberNotInRange(start, end, number) проверяет, не входит ли число в промежуток. 
+// То есть число должно быть меньше либо равно start и больше либо равно end. Результатом 
+// выражения проверки будет буль true или false.
+// Она объявляет три параметра, значения которых будут задаваться во время её вызова:
+// number - число, не вхождение которого проверяется
+// start - начало числового промежутка
+// end - конец числового промежутка
+// Присвой переменной isNotInRange выражение инверсии значения переменной isInRange используя 
+// оператор !.
+
+// function isNumberNotInRange(start, end, number) {
+//   const isInRange = number >= start && number <= end;
+//   const isNotInRange = !isInRange;
+
+//   return isNotInRange;
+// }
+
+// console.log(isNumberNotInRange(10, 30, 17));
+// console.log(isNumberNotInRange(10, 30, 5));
+// console.log(isNumberNotInRange(20, 50, 24));
+// console.log(isNumberNotInRange(20, 50, 76));
+
+
+// Функция getDiscount(totalSpent) определяет значение скидки в зависимости от общей суммы
+//  потраченных денег (параметр totalSpent) в магазине за всё время (партнёрская программа). 
+//  Скидка записывается в переменную discount и возвращается из функции как результат её работы.
+// Используя ветвления и логические операторы, дополни код функции.
+// Если потрачено от 50000 ( включительно ) или больше кредитов - скидка 10% (золотой партнёр)
+// Если потрачено от 20000 (включительно) до 50000 кредитов - скидка 5% (серебрянный партнёр)
+// Если потрачено от 5000 (включительно) до 20000 кредитов - скидка 2% (бронзовый партнёр)
+// Если потрачено меньше чем 5000 кредитов - скидка 0 (базовый партнёр)
+// Значения скидок каждого уровня хранятся в одноимённых константах BASE_DISCOUNT, 
+// BRONZE_DISCOUNT, SILVER_DISCOUNT и GOLD_DISCOUNT.
+
+// function getDiscount(totalSpent) {
+//   let discount = BASE_DISCOUNT = 0;
+//   const BRONZE_DISCOUNT = 0.02;
+//   const SILVER_DISCOUNT = 0.05;
+//   const GOLD_DISCOUNT = 0.1;
+//   if (totalSpent < 5000) {
+//   discount;
+//   } else if (totalSpent >= 5000 && totalSpent < 20000) {
+//     discount = BRONZE_DISCOUNT;
+//   } else if (totalSpent >= 20000 && totalSpent < 50000){
+//     discount = SILVER_DISCOUNT;
+//   } else {
+//     discount = GOLD_DISCOUNT;
+//   }
+//   return discount;
+// }
+
+// console.log(getDiscount(137000));
+// console.log(getDiscount(46900));
+// console.log(getDiscount(8250));
+// console.log(getDiscount(1300));
+// console.log(getDiscount(5000));
+// console.log(getDiscount(20000));
+// console.log(getDiscount(50000));
+
+
+// Выполни рефакторинг решения задачи «Склад товаров», заменив инструкцию if...else тернарным
+//  оператором.
+// function checkStorage(available, ordered) {
+//   let message;
+
+//   if (ordered > available) {
+//     message = "Not enough goods in stock!";
+//   } else {
+//     message = "The order is accepted, our manager will contact you";
+//   }
+
+//   return message;
+// }
+
+//   function checkStorage(available, ordered) {
+//   let message = ordered < available 
+//   ? "The order is accepted, our manager will contact you" 
+//   : 'Not enough goods in stock!';
+
+//   return message;
+//   }
+
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 150));
+// console.log(checkStorage(150, 180));
+
+
+// Функция checkPassword(password) сравнивает переданный ей пароль (параметр password) 
+// с сохранённым паролем администратора (константа ADMIN_PASSWORD) и возвращает строку 
+// с сообщением о результате.
+// Используя тернарный оператор дополни функцию так, что:
+// Если значения password и ADMIN_PASSWORD совпадают, присвой переменной message строку 
+// "Access is allowed".
+// В противном случае, присвой message строку "Access denied, wrong password!".
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+
+//   message = password === ADMIN_PASSWORD 
+//   ? "Access is allowed"
+//   : "Access denied, wrong password!"
+
+//   return message;
+// }
+
+// console.log(checkPassword("jqueryismyjam"));
+// console.log(checkPassword("angul4r1sl1f3"));
+// console.log(checkPassword("r3actsux"));
+
+
+// Функция getSubscriptionPrice(type) получает строку с типом подписки пользователя 
+// (параметр type), проверяет её на совпадение с тремя возможными типами ежемесячной подписки 
+// и возвращает цену хранящуюся в переменной price.
+// Если значение параметра type это строка:
+// "starter" - цена подписки 0 кредитов.
+// "professional" - цена подписки 20 кредитов.
+// "organization" - цена подписки 50 кредитов.
+// Изначально в теле функции была инструкция if...else, которая выглядела вот так.
+// if (type === "starter") {
+//   price = 0;
+// } else if (type === "professional") {
+//   price = 20;
+// } else if (type === "organization") {
+//   price = 50;
+// }
+// После рефакторинга инструкция if..else была заменена на switch. Дополни код инструкции switch, 
+// чтобы функция работала правильно.
+
+// function getSubscriptionPrice(type) {
+// let price;
+// switch (type) {
+// case "professional":
+//   price = 20;
+//   break;
+
+// case "organization":
+//   price = 50;
+//   break;
+
+
+// case 'starter':
+//   price = 0;
+//   break;
+// }
+
+// return price;
+// }
+
+// console.log(getSubscriptionPrice("professional"));
+// console.log(getSubscriptionPrice("organization"));
+// console.log(getSubscriptionPrice("starter"));
+
+
+// Функция checkPassword(password) получает пароль в параметр password, проверяет его на 
+// совпадение с паролем администратора в переменной ADMIN_PASSWORD и возвращает сообщение о
+//  результате сравнения, хранящееся в переменной message.
+// Если значение параметра password:
+// равно null, значит пользователь отменил операцию и в message записывается строка
+//  "Canceled by user!".
+// совпадает со значением ADMIN_PASSWORD, в переменную message присваивается строка "Welcome!".
+// не удобвлетворяет ни одному из предыдущих условий, в переменную message записывается 
+// строка "Access denied, wrong password!".
+// Проведи рефакторинг кода, заменив инструкцию if..else на switch, и не забудь о 
+// блоке default (аналог else).
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+
+//   switch (password) {
+//     case null:
+//       message = 'Canceled by user!';
+//       break;
+
+//     case ADMIN_PASSWORD:
+//       message = "Welcome!";
+//       break;
+
+//     default:
+//     message = "Access denied, wrong password!";
+//   }
+//   return message;
+// }
+
+// console.log(checkPassword("mangohackzor"));
+// console.log(checkPassword(null));
+// console.log(checkPassword("polyhax"));
+// console.log(checkPassword("jqueryismyjam"));
+
+
+// Функция getShippingCost(country) должна проверять возможность доставки товара в страну
+//  пользователя (параметр country) и возвращать сообщение о результате хранящееся в переменной
+//   message. Обязательно используй инструкцию switch.
+// Формат возвращаемой строки "Shipping to <country> will cost <price> credits", где вместо 
+// <country> и <price> необходимо подставить соотвествующие значения.
+// Список стран и стоимость доставки:
+// China - 100 кредитов
+// Chile - 250 кредитов
+// Australia - 170 кредитов
+// Jamaica - 120 кредитов
+// Из списка видно, что доставка есть не везде. Если указанной страны нет в списке, 
+// то функция должна вернуть строку "Sorry, there is no delivery to your country"
+
+// function getShippingCost(country) {
+//   let price;
+
+//   switch (country) {
+//     case "China":
+//       price = 100;
+//       break;
+
+//     case "Chile":
+//       price = 250;
+//       break;
+
+//     case "Australia":
+//       price = 170;
+//       break;
+
+//     case "Jamaica":
+//       price = 120;
+//       break;
+
+//     default:
+//       return  "Sorry, there is no delivery to your country";
+//   }
+
+//   return `Shipping to ${country} will cost ${price} credits`;
+// }
+
+// console.log(getShippingCost("Australia"));
+// console.log(getShippingCost("Germany"));
+// console.log(getShippingCost("China"));
+// console.log(getShippingCost("Chile"));
+// console.log(getShippingCost("Jamaica"));
+// console.log(getShippingCost("Sweden"));
+
+
+// Функция getNameLength(name) принимает имя (параметр name) и возвращает строку, в которой
+//  указана его длина. Дополни шаблонную строку в переменной message длиной строки из параметра
+//   name.
+
+// function getNameLength(name) {
+//   const nameLength = name.length;
+//   const message = `Name ${name} is ${nameLength} characters long`;
+// return message;
+// }
+
+// console.log(getNameLength("Poly"));
+// console.log(getNameLength("Harambe"));
+// console.log(getNameLength("Billy"));
+// console.log(getNameLength("Joe"));
+
+
+// Дополни код присвоив объявленным переменным выражения обращения к соответствующим элементам 
+// или свойствам строки в переменной course.
+// courseTopicLength - длина строки.
+// firstElement - первый символ строки.
+// lastElement - последний символ строки.
+
+// const courseTopic = "JavaScript essentials";
+
+
+// const courseTopicLength = console.log(courseTopic.length);
+// const firstElement = console.log(courseTopic[0]); 
+// const lastElement = console.log(courseTopic[courseTopic.length - 1]);
+
+
+// Функция getSubstring(string, length) принимает строку и возвращает подстроку от начала и 
+// до length символов. Она объявляет два параметра, значения которых будут задаваться во время 
+// её вызова:
+// string - оригинальная строка
+// length - количество символов с начала строки для подстроки
+// Присвой переменной substring выражение создания подстроки длинной length символов 
+// (от начала) из строки string.
+
+// function getSubstring(string, length) {
+
+// substring = string.slice(string, length);
+// return substring;
+// }
+
+// console.log(getSubstring("Hello world", 3));
+// console.log(getSubstring("Hello world", 6));
+// console.log(getSubstring("Hello world", 8));
+// console.log(getSubstring("Hello world", 11));
+// console.log(getSubstring("Hello world", 0));
+
+
+// Функция formatMessage(message, maxLength) принимает строку (параметр message) и 
+// форматирует её, если длина превышает значение в параметре maxLength.
+// Дополни код функции так, что если длина строки:
+// не превышает maxLength, функция возвращает её в исходном виде.
+// больше maxLength, то функция обрезает строку до maxLength символов и добавляет в конец 
+// троеточие "...", после чего возвращает укороченную версию.
+
+function formatMessage(message, maxLength) {
+const messageLength = message.length;
+message.slice(messageLength, maxLength);
+}
+ 
+console.log(formatMessage("Curabitur ligula sapien", 16));
+console.log(formatMessage("Curabitur ligula sapien", 23));
+console.log(formatMessage("Vestibulum facilisis purus nec", 20));
+console.log(formatMessage("Vestibulum facilisis purus nec", 30));
+console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15));
+console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41));
