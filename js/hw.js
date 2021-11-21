@@ -1542,14 +1542,104 @@
 // больше maxLength, то функция обрезает строку до maxLength символов и добавляет в конец 
 // троеточие "...", после чего возвращает укороченную версию.
 
-function formatMessage(message, maxLength) {
-const messageLength = message.length;
-message.slice(messageLength, maxLength);
-}
+// function formatMessage(message, maxLength) {
+// let result;
+
+// result = message.length;
+// // if (result <= maxLength) {
+// //   return message;
+// // } else {
+// //   return message.slice(0, maxLength) + '...';
+// // }
+
+// return result <= maxLength 
+// ?  message
+// :  message.slice(0, maxLength) + '...';
+// }
  
-console.log(formatMessage("Curabitur ligula sapien", 16));
-console.log(formatMessage("Curabitur ligula sapien", 23));
-console.log(formatMessage("Vestibulum facilisis purus nec", 20));
-console.log(formatMessage("Vestibulum facilisis purus nec", 30));
-console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15));
-console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41));
+// console.log(formatMessage("Curabitur ligula sapien", 16));
+// console.log(formatMessage("Curabitur ligula sapien", 23));
+// console.log(formatMessage("Vestibulum facilisis purus nec", 20));
+// console.log(formatMessage("Vestibulum facilisis purus nec", 30));
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15));
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41));
+
+
+// Функция normalizeInput(input) принимает строку (параметр input) и возвращает такую же строку,
+//  но в нижнем регистре. Присвой переменной normalizedInput выражение создания строки в нижнем 
+//  регистре из параметра input.
+
+// function normalizeInput(input) {
+// const normalizedInput = input.toLowerCase();
+// return normalizedInput;
+// }
+
+// console.log(normalizeInput("Hello world"));
+// console.log(normalizeInput("This ISN'T SpaM"));
+// console.log(normalizeInput("Big SALE"));
+
+
+// Функция checkName(fullname, name) принимает два параметра и возвращает буль true или 
+// false - результат проверки вхождения подстроки name в строку fullname.
+// fullname - полное имя состоящее из двух слов (имени и фамилии) разделённых пробелом.
+// name - имя для проверки вхождения в полное имя.
+// Присвой переменной result выражение проверки вхождения имени (параметр name), в полное 
+// имя (параметр fullname). Пусть функция строго относится к регистру букв, то есть «Петя» 
+// и «петя» для неё разные имена.
+
+// function checkForName(fullName, name) {
+//   const result = fullName.includes(name);
+
+//   return result;
+// // const normalizedString = fullname.toLowerCase().includes(name.toLowerCase());
+
+// //  return normalizedString;
+// }
+
+// console.log(checkForName("Egor Kolbasov", "Egor"));
+// console.log(checkForName("Egor Kolbasov", "egor"));
+// console.log(checkForName("Egor Kolbasov", "egOr"));
+// console.log(checkForName("Egor Kolbasov", "Zhenya"));
+// console.log(checkForName("Vadim Nekrasov", "Vadim"));
+// console.log(checkForName("Vadim Nekrasov", "vadim"));
+// console.log(checkForName("Vadim Nekrasov", "Dima"));
+
+
+// Функция checkForSpam(message) принимает строку (параметр message), проверяет её на содержание
+//  запрещенных слов spam и sale, и возвращает результат проверки. Слова в строке параметра 
+//  message могут быть в произвольном регистре, например SPAM или sAlE.
+// Если нашли запрещенное слово (spam или sale) то функция возвращает буль true.
+// Если в строке нет запрещенных слов, функция возвращает буль false.
+
+
+// function checkForSpam(message) {
+// // создать переменные с запрещенными словами
+// const blackListWord1 = 'spam';
+// const blackListWord2 = 'sale';
+// // let result;
+// // // привести сообщение в нижний регистр
+// const normalizedString = message.toLowerCase();
+// // if (normalizedString.includes(blackListWord1) || normalizedString.includes(blackListWord2)) {
+// //   result = true;
+// // }else {
+// //   result = false;
+// // }
+
+// // let result;
+
+
+// return normalizedString.includes(blackListWord1) || normalizedString.includes(blackListWord2)
+// ?  true 
+// :  false;
+
+// // return result;
+// }
+
+// console.log(checkForSpam("Latest technology news"));
+// console.log(checkForSpam("JavaScript weekly newsletter"));
+// console.log(checkForSpam("Get best sale offers now!"));
+// console.log(checkForSpam("Amazing SalE, only tonight!"));
+// console.log(checkForSpam("Trust me, this is not a spam message"));
+// console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!"));
+// console.log(checkForSpam("[SPAM] How to earn fast money?"));
+
