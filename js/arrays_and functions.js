@@ -562,20 +562,161 @@
 // При выполнении этой задачи в теле функции includes() нельзя использовать метод 
 // массив.includes(значение).
 
-function includes(array, value) {
-let i =[];
-for ( i = 0; i < array.length; i +=1) {
-    // console.log(array[i]); 
-    return array[i] +=1;
-}
-}
+// function includes(array, value) {
+// let i =[];
+// for ( i = 0; i < array.length; i +=1) {
+//     // console.log(array[i]); 
+//     return array[i] +=1;
+// }
+// }
 
 
-console.log(includes([1, 2, 3, 4, 5], 3));
-console.log(includes([1, 2, 3, 4, 5], 17));
+// console.log(includes([1, 2, 3, 4, 5], 3));
+// console.log(includes([1, 2, 3, 4, 5], 17));
 // console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
 // console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
 // console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
 // console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
 
+
+// Запиши условие в инструкции if так, чтобы функция работала правильно.
+
+// function checkAge(age) {
+//   if (age >= 18) { // Change this line
+//     return "You are an adult";
+//   }
+
+//   return "You are a minor";
+// }
+
+// console.log(checkAge(20));
+// console.log(checkAge(8));
+// console.log(checkAge(14));
+// console.log(checkAge(38));
+
+
+// Функция checkPassword получает пароль пользователя в параметр password, проверяет 
+// его на совпадение с паролем администратора в переменной ADMIN_PASSWORD и возвращает 
+// сообщение о результате сравнения.
+// Проведи рефакторинг кода функции checkStorage используя паттерн «ранний возврат»:
+// удали переменную message
+// удали else
+// код должен работать так же, как и до оптимизации
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+
+//   if (password === ADMIN_PASSWORD) {
+//     return "Welcome!";
+//     }
+    
+//     return "Access denied, wrong password!";
+// }
+
+// console.log(checkPassword("mangohackzor"));
+// console.log(checkPassword("polyhax"));
+// console.log(checkPassword("jqueryismyjam"));
+
+
+// Функция checkStorage проверяет возможность оформления заказа и возвращает сообщение 
+// о результате.Она принимает два параметра, значения которых будут задаваться во время
+// её вызова.
+
+// available - доступное количество товаров на складе
+// ordered - количество единиц товара в заказе
+// Проведи рефакторинг кода функции checkStorage используя паттерн «ранний возврат».
+
+// function checkStorage(available, ordered) {
+//   // Change code below this line
+//   let message;
+
+//   if (ordered === 0) {
+//     message = "Your order is empty!";
+//   } else if (ordered > available) {
+//     message = "Your order is too large, not enough goods in stock!";
+//   } else {
+//     message = "The order is accepted, our manager will contact you";
+//   }
+
+//   return message;
+//   // Change code above this line
+// }
+
+// function checkStorage(available, ordered) {
+
+//     if (ordered === 0) {
+//         return "Your order is empty!";
+//     }
+    
+//     if (ordered > available) {
+//         return "Your order is too large, not enough goods in stock!";
+//     }
+
+//     return "The order is accepted, our manager will contact you";
+// }
+
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(70, 0));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 250));
+// console.log(checkStorage(150, 0));
+
+
+// Объяви переменную fruits и присвой ей массив фруктов -
+//     строк "apple", "plum", "pear" и "orange".
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+
+
+// Объяви три переменные и присвой каждой из них значение, используя нотацию квадратных
+// скобок.
+// const fruits = ["apple", "plum", "pear", "orange"];
+
+// const firstElement = fruits[0];
+// console.log(firstElement);
+// const secondElement = fruits[1];
+// console.log(secondElement);
+// const lastElement = fruits[fruits.length -1];
+// console.log(lastElement);
+
+
+// Переопредели значения элементов с индексами 1 и 3. Замени "plum" на "peach", а
+// "orange" на "banana".
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+
+// for (let fruit of fruits) {
+//     console.table(fruit);
+// }
+
+// fruits[1] = 'peach';
+// console.log(fruits[1]);
+// fruits[fruits.length - 1] = 'banana';
+// console.log(fruits[fruits.length - 1]);
+
+
+// Объяви переменную fruitsArrayLength и присвой ей длину массива fruits используя
+//  свойство length.
+
+// const fruits = ["apple", "peach", "pear", "banana"];
+
+// const fruitsArrayLength = fruits.length;
+// console.log(fruitsArrayLength);
+
+
+// const fruits = ["apple", "peach", "pear", "banana"];
+// // Объяви две переменные:
+
+// const lastElementIndex = fruits.length - 1;
+// console.log(lastElementIndex);
+
+// const lastElement = fruits[lastElementIndex];
+// console.log(lastElement);
+
+
+
+// Напиши функцию getExtremeElements(array) которая принимает один параметр
+// array - массив элементов произвольной длины.Функция должна возвращать массив из 
+// двух элементов - первого и последнего элемента параметра array.
 
