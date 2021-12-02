@@ -720,3 +720,125 @@
 // array - массив элементов произвольной длины.Функция должна возвращать массив из 
 // двух элементов - первого и последнего элемента параметра array.
 
+// function getExtremeElements(array) {
+//     const newArray = [];
+    
+//     for (const elements of array) {
+//         console.log(elements);
+//         // newArray.push(elements[0])
+//         // newArray.push(array[0]);
+//     }
+//     const firstElement = array[0];
+//     const lastElementIndex = array.length - 1;
+//     // console.log(lastElementIndex);
+//     const lastElement = array[lastElementIndex];
+//     // console.log(lastElement);
+//     newArray.push(firstElement, lastElement);
+
+//     return newArray;
+// }
+
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+// console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
+
+// Дополни код функции splitMessage(message, delimeter) так, чтобы она возвращала в 
+// переменной words результат разделения строки message по разделителю delimeter -
+//     массив строк.
+
+// function splitMessage (message, delimeter) {
+//     // const messageArray = [];
+//     const messageArray = message.split(delimeter);
+
+//     return messageArray;
+// }
+
+// console.log(splitMessage("Mango hurries to the train", " ")); 
+// console.log(splitMessage("Mango", "")); 
+// console.log(splitMessage("best_for_week", "_")); 
+
+
+// Сервису гравировки украшений нужна функция, которая бы автоматически считала цену
+// гравировки, в зависимости от количества слов и цены за слово.
+// Объявлена функция calculateEngravingPrice(message, pricePerWord).Эта функция
+//  принимает строку, состоящую из слов разделённых только пробелами(параметр message)
+//   и цену гравировки одного слова(параметр pricePerWord).
+// Напиши тело функции, чтобы она возвращала общую стоимость гравировки всех слов в
+// строке.
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//     //принять сообщение в переменную и разделить слова по пробелу в массив
+//     const wordsArray = message.split(" ");
+//     let totalPrice = 0;
+
+//     for (word of wordsArray) {
+//         word = pricePerWord;
+//         totalPrice += word;
+//     }
+
+//     return totalPrice;
+
+// }
+
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 20));
+// console.log(calculateEngravingPrice("Web-development is creative work", 40));
+// console.log(calculateEngravingPrice("Web-development is creative work", 20));
+
+
+// Дополни код функции makeStringFromArray(array, delimeter) так, чтобы она возвращала 
+// в переменной string результат соединения элементов массива array c разделителем
+// delimeter - строку.
+
+// function makeStringFromArray(array, delimeter) {
+//     // создать переменную для строки, принять array,
+//     //  преобразовать из него строку методом джоин
+//     const transformedArray = array.join(delimeter);
+
+//     return transformedArray;
+// }
+
+// console.log(makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " "));
+// console.log(makeStringFromArray(["M", "a", "n", "g", "o"], ""));
+// console.log(makeStringFromArray(["top", "picks", "for", "you"], "_"));
+
+
+// Напиши функцию slugify(title) которая принимает заголовок статьи, параметр title,
+//     и возвращает slug, созданный из этой строки.
+// Значением параметра title будут строки, слова которых разделены только пробелами
+// Все символы slug должны быть в нижнем регистре
+// Все слова slug должна быть разделены тире
+
+
+// function slugify(title) {
+// // привести в нижний регистр title
+//     const normalizedTitle = title.toLowerCase();
+    
+//     // сделать из тайтла массив по пробелу
+//     const transformeredArray = normalizedTitle.split(" ");
+    
+//     // создать слаг из массива с помощью джоина
+//     const slugTitle = transformeredArray.join("-")
+//     return slugTitle;
+// }
+
+// console.log(slugify("Arrays for begginers"));
+// console.log(slugify("English for developer"));
+// console.log(slugify("Ten secrets of JavaScript"));
+// console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
