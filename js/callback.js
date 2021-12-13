@@ -121,3 +121,32 @@
 //   // Logging value: 0
 //   // Logging value: 1
 //   // Logging value: 2
+
+// ---------------------------------------------------------------
+// const numbers = [5, 10, 15, 20, 25];
+
+// Классический for
+// for (let i = 0; i < numbers.length; i += 1) {
+//   console.log(`Индекс ${i}, значение ${numbers[i]}`);
+// }
+
+// // Перебирающий forEach
+// numbers.forEach(function (number, index) {
+//   console.log(`Индекс ${index}, значение ${number}`);
+// });
+
+// --------------------------------------------------------------------
+// const numbers = [5, 10, 15, 20, 25];
+
+// const logMessage = (number, index) => {
+//   console.log(`Индекс ${index}, значение ${number}`);
+// };
+
+// numbers.forEach(logMessage);
+
+
+// ----------------------------------------------------------------------
+// Декларативный подход
+const numbers = [1, 2, 3, 4, 5];
+const filteredNumbers = numbers.filter(value => value > 3);
+console.log(filteredNumbers); // [4, 5]
