@@ -958,4 +958,3 @@
 // console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
 // console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"));
 
-

@@ -1643,3 +1643,5 @@
 // console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!"));
 // console.log(checkForSpam("[SPAM] How to earn fast money?"));
 
+
+console.log(typeof(null));
